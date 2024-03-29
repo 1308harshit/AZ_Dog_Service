@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="style.css" type="text/css"> <!-- Main stylesheet -->
+    <link rel="stylesheet" href="loadingStyle.css"> <!-- Loading animation stylesheet -->
+    <link rel="stylesheet" href="Mybutton.css"> <!-- Custom button stylesheet -->
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- Title of the document -->
+    <title>Document</title>
+
+    <!-- JavaScript function to handle loading animation -->
+    <script>
+        function openloading() {
+            // Hide the button
+            document.getElementById('show-btn').style.display = "none";
+            // Display the loading animation
+            document.getElementById('r1').style.display = "block";
+            // Hide the map iframe
+            document.getElementById('map').style.display = "none";
+            // After 3 seconds, hide the loading animation and display the map iframe
+            setTimeout(() => {
+                document.getElementById('r1').style.display = "none";
+                var a = document.getElementById('map');
+                a.style.display = "block"
+            }, 3000);
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- Background video -->
+    <video id="background-video" autoplay loop muted>
+        <source src="videos/training_vdo.mp4" type="video/mp4">
+    </video>
+
+    <!-- Our NavBar -->
+    <div id="myNavbar">
+        <!-- Navbar content loaded dynamically from external HTML file using jQuery -->
+    </div>
+    <script>
+        // Load the navbar from an external HTML file
+        $(function () {
+            $("#myNavbar").load("navbarWithoutLogin.html");
+        });
+    </script>
+    
+    <!-- Navbar over -->
+
+    <!-- Container to center elements horizontally -->
+    <div class="d-flex justify-content-center"></div>
+
+    <!-- Google Maps iframe -->
+    <iframe id="map" src="https://www.google.com/maps/d/embed?mid=1Dkm_1NquKDC00HWgS52aw881T6MHAdU&ehbc=2E312F&noprof=1"
+        width="75%" height="500 " style="position: relative; margin-top: 10px;
+	border-radius: 10px;position:relative;margin-left: 13%;display: none; "></iframe>
+
+    <!-- Loading animation container -->
+    <div class="ring" id="r1">Loading
+        <!-- Loading animation span -->
+        <span class="ring-span"></span>
+    </div>
+
+    <!-- Button to trigger the loading animation -->
+    <button class="btn-64" id="show-btn" onclick="openloading()" role="button"><span class="text btn-span">View
+            Results</span></button>
+
+<!-- 
+    d-flex: Makes the container a flex container.
+justify-content-center: Aligns flex items horizontally at the center.
+btn-64: Styles the button with predefined height and width.
+text: Styles the text inside the button.
+btn-span: Styles the text span inside the button.
+ -->
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- important links -->
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- responsiveness of navbar-->
+    <style>
+
+/* Styling for login button */
+    .btn-login {
+        background: linear-gradient(to bottom right, #EF4765, #FF9A5A); /* Gradient background */
+        border: 0; /* Remove border */
+        border-radius: 12px; /* Rounded border */
+        color: #FFFFFF; /* Text color */
+        cursor: pointer; /* Cursor style */
+        display: inline-block; /* Display as inline block */
+        font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Font family */
+        font-size: 16px; /* Font size */
+        font-weight: 500; /* Font weight */
+        line-height: 2.5; /* Line height */
+        outline: transparent; /* Remove outline */
+        padding: 0 1rem; /* Padding */
+        text-align: center; /* Center text */
+        text-decoration: none; /* Remove text decoration */
+        transition: box-shadow .2s ease-in-out; /* Apply transition for box shadow */
+        user-select: none; /* Disable text selection */
+        -webkit-user-select: none; /* Disable text selection for webkit browsers */
+        touch-action: manipulation; /* Allow touch manipulation */
+        white-space: nowrap; /* Prevent wrapping */
+    }
+
+    .btn-login:not([disabled]):focus {
+        box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5); /* Add focus box shadow */
+    }
+
+    .btn-login:not([disabled]):hover {
+        box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5); /* Add hover box shadow */
+    }
+
+</style>
+
+    <title>Document</title>
+</head>
+
+<body class="vh-100 overflow-hidden">
+    <!-- adding video in background -->
+    <video id="background-video" autoplay loop muted>
+        <source src="videos/training.mp4" type="video/mp4">
+    </video>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent ">
+        <div class="container">
+            <!-- Logo -->
+
+            <!-- <a class="navbar-brand fs-4" href="#"><img class="logo"
+                    src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmplNzNramtsMDY1bGlpNWdycXd2dnJmcDdrdXBqM2ZxMnBpOWljZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/co62TbJyuDwWVeXMfK/giphy.gif"
+                    alt="" srcset=""></a> -->
+
+            <a class="navbar-brand fs-4" href="#"><img class="logo"
+                src="lg.gif"
+                alt="" srcset=""></a>
+                    
+            <!-- Toogle button -->
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Side bar-->
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <!-- Sidebar Header -->
+                <div class="offcanvas-header text-white border-bottom">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img class="logo"
+                            src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmplNzNramtsMDY1bGlpNWdycXd2dnJmcDdrdXBqM2ZxMnBpOWljZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/co62TbJyuDwWVeXMfK/giphy.gif"
+                            alt="" srcset=""></h5>
+                    <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <!-- Sidebar Body -->
+                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                    <!--d-flex and flex-column p4 for moving login-sign up at bottom, p-lg-0 to reduce top margin in large size-->
+                    <ul class="navbar-nav justify-content-center align-items-center flex-grow-1 pe-3">
+                        <li class="nav-item mx-2 fs-5">
+                            <a class="nav-link active" style="font-weight:500;" aria-current="page"
+                                onclick="window.open('index.html')" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-2 fs-5">
+                            <a class="nav-link " style="font-weight:500;color: #FFFFFF;" href="#"
+                                onclick="window.open('about.html')">About</a>
+                        </li>
+
+                        <li class="nav-item mx-2 fs-5">
+                            <a class="nav-link " style="font-weight:500;color: #FFFFFF;" href="#"
+                                onclick="window.open('publicServices.html')">Public Services</a>
+                        </li>
+
+                        <li class="nav-item mx-2 fs-5">
+                            <a class="nav-link " style="font-weight:500;color: #FFFFFF;" href="#"
+                                onclick="window.open('privateHospitals.html')">Private Hospitals</a>
+                        </li>
+
+                        <li class="nav-item mx-2 fs-5">
+                            <a class="nav-link " style="font-weight:500;color: #FFFFFF;" href="#"
+                                onclick="window.open('dogFriendlyPlaces.html')">Dog Friendly Places</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  dropdown-toggle mx-2 fs-5" href="#" role="button"
+                                data-bs-toggle="dropdown" style="font-weight:500;color: #FFFFFF;" aria-expanded="false">
+                                Additional Services
+                            </a>
+                            <ul class="dropdown-menu ">
+                                <li><a class="dropdown-item " onclick="window.open('training.html')"
+                                        href="#">Training Centers</a></li>
+                                <li><a class="dropdown-item " href="#"
+                                        onclick="window.open('groomingCenters.html')">Grooming Centers</a></li>
+                                <li><a class="dropdown-item " href="#shop1.html"
+                                        onclick="window.open('dayCareCenters.html')">Day-care Centers</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <!--Login/Signup-->
+                    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+
+                        <!-- <a href="#login" id="button" class="text-white fs-5">Login</a> -->
+                        <button class="btn-login" id="button" class="text-white fs-5" data-bs-target="#login"
+                            role="button">Login</button>
+                        <!-- <a href="#signup" class="text-white text-decoration-none px-3 py-1 rounded-4 fs-5"
+                            style="background-color: #f94ca4;">Sign Up</a> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="wrapper">
+        <span class="icon-close" id="close_btn"><ion-icon name="close"></ion-icon></span>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">I agree to the terms & conditions</label>
+
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- script for changing login-registration styles and vice versa -->
+
+    <script>
+        document.getElementById("button").addEventListener("click", function () {
+            document.querySelector(".wrapper").style.display = "flex";
+        })
+
+        document.getElementById("close_btn").addEventListener("click", function () {
+            document.querySelector(".wrapper").style.display = "none";
+        })
+    </script>
+
+    <!-- Script for openning login page on button -->
+
+    <script>
+        function openDCC() {
+
+        }
+    </script>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!-- 
+    navbar: Creates a navigation bar.
+    navbar-expand-lg: Specifies that the navbar should expand on large screens.
+    navbar-dark: Sets the navbar's color scheme to dark.
+    bg-transparent: Makes the background of the navbar transparent.
+    container: Provides a responsive fixed-width container.
+    navbar-brand: Defines the logo or brand name in the navbar.
+    navbar-toggler: Creates a toggle button for collapsible navigation on smaller screens.
+    offcanvas: Represents a sidebar that can be toggled on and off canvas.
+    offcanvas-start: Positions the offcanvas sidebar on the left side.
+    offcanvas-header: Styles the header section of the offcanvas sidebar.
+    offcanvas-title: Styles the title of the offcanvas sidebar.
+    btn-close: Styles the close button of the offcanvas sidebar.
+    offcanvas-body: Styles the body section of the offcanvas sidebar.
+    navbar-nav: Defines the navigation links container.
+    nav-item: Represents an individual item within the navigation.
+    nav-link: Styles the navigation links.
+    btn-login: Styles the login button.
+    d-flex: Enables flexbox layout.
+    flex-column: Arranges child elements in a column.
+    flex-lg-row: Arranges child elements in a row on large screens.
+    justify-content-center: Aligns flex items along the main axis to the center.
+    align-items-center: Aligns flex items along the cross axis to the center.
+    gap-3: Sets the gap between flex items to 3. 
+-->
+</body>
+
+</html>

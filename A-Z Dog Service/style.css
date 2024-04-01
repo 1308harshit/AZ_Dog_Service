@@ -1,13 +1,16 @@
+/* CSS for logo */
 .logo {
-    height: 50px;
-    width: 40px;
-    transition: .4s;
+    height: 40px; /* Set height of the logo */
+    width: 40px; /* Set width of the logo */
+    transition: .4s; /* Apply transition effect for smooth scaling */
 }
 
+/* Scale logo on hover */
 .logo:hover {
-    transform: scale(1.3);
-    cursor: pointer;
+    transform: scale(1.3); /* Scale up the logo on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
+
 
 
 /*-----------nav bar ended--------------- */
@@ -15,163 +18,181 @@
 
 /*---------Login Part CSS----------*/
 
+/* Styling for wrapper */
 .wrapper {
-    align-items: center;
-    margin-left: 35%;
-    margin-top: 5%;
-
-    position: relative;
-    background: transparent;
-    border: 2px solid rgba(225, 225, 225, .5);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-
-    overflow: hidden;
-    /*For cross design*/
+    align-items: center; /* Align items */
+    margin-left: 35%; /* Margin from left */
+    margin-top: 5%; /* Margin from top */
+    position: relative; /* Relative positioning */
+    background: transparent; /* Transparent background */
+    border: 2px solid rgba(225, 225, 225, .5); /* Border style */
+    border-radius: 20px; /* Border radius */
+    backdrop-filter: blur(20px); /* Apply blur effect to background */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* Box shadow */
+    display: none; /* Initially hide the element */
+    justify-content: center; /* Align content horizontally */
+    overflow: hidden; /* Hide overflowing content */
+    /* For cross design */
 }
 
+/* Styling for form box */
 .wrapper .form-box {
-    width: 100%;
-    padding: 40px;
+    width: 100%; /* Set width to 100% */
+    padding: 40px; /* Padding inside form box */
 }
 
+/* Styling for login form */
 .wrapper .form-box.login {
-    transition: transform .18s ease;
-    transform: translateX(0);
+    transition: transform .18s ease; /* Apply transition effect */
+    transform: translateX(0); /* Move form box horizontally */
 }
 
+/* Styling for register form */
 .wrapper .form-box.register {
-    position: absolute;
-    transition: none;
-    transform: translateX(400px);
+    position: absolute; /* Position absolute */
+    transition: none; /* Remove transition effect */
+    transform: translateX(400px); /* Move form box horizontally */
 }
 
+/* Styling for close icon */
 .wrapper .icon-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background: #162938;
-    font-size: 2em;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-    z-index: 1;
+    position: absolute; /* Position absolute */
+    top: 0; /* Distance from top */
+    right: 0; /* Distance from right */
+    width: 45px; /* Width of icon */
+    height: 45px; /* Height of icon */
+    background: #162938; /* Background color */
+    font-size: 2em; /* Font size */
+    color: #fff; /* Icon color */
+    display: flex; /* Display as flex */
+    justify-content: center; /* Align content horizontally */
+    align-items: center; /* Align items vertically */
+    border-bottom-left-radius: 20px; /* Border radius */
+    cursor: pointer; /* Set cursor to pointer */
+    z-index: 1; /* Set z-index */
 }
 
+/* Styling for heading */
 .wrapper h2 {
-    font-size: 2em;
-    color: #162938;
-    text-align: center;
+    font-size: 2em; /* Font size */
+    color: #162938; /* Text color */
+    text-align: center; /* Align text center */
 }
 
+/* Styling for input box */
 .input-box {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    border-bottom: 2px solid #162938;
-    margin: 30px 0;
+    position: relative; /* Position relative */
+    width: 100%; /* Set width to 100% */
+    height: 50px; /* Set height to 50px */
+    border-bottom: 2px solid #162938; /* Bottom border */
+    margin: 30px 0; /* Margin */
 }
 
+/* Styling for input box label */
 .input-box label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: #162938;
-    font-weight: 500;
-    pointer-events: none;
-    transition: .5s;
+    position: absolute; /* Position absolute */
+    top: 50%; /* Distance from top */
+    left: 5px; /* Distance from left */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    font-size: 1em; /* Font size */
+    color: #162938; /* Text color */
+    font-weight: 500; /* Font weight */
+    pointer-events: none; /* Disable pointer events */
+    transition: .5s; /* Apply transition effect */
 }
 
+/* Styling for input box input */
 .input-box input:focus~label,
 .input-box input:valid~label {
-    top: -5px
+    top: -5px; /* Move label up */
 }
 
+/* Styling for input box input */
 .input-box input {
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    color: #162938;
-    font-weight: 600;
-    padding: 0 35px 0 5px
-        /*So that pass/email dont appear on icon*/
+    width: 100%; /* Set width to 100% */
+    height: 100%; /* Set height to 100% */
+    background: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    font-size: 1em; /* Font size */
+    color: #162938; /* Text color */
+    font-weight: 600; /* Font weight */
+    padding: 0 35px 0 5px; /* Padding */
+    /* So that pass/email dont appear on icon */
 }
 
+/* Styling for input box icon */
 .input-box .icon {
-    position: absolute;
-    right: 8px;
-    font-size: 1.2em;
-    color: #162938;
-    line-height: 57px;
+    position: absolute; /* Position absolute */
+    right: 8px; /* Distance from right */
+    font-size: 1.2em; /* Font size */
+    color: #162938; /* Icon color */
+    line-height: 57px; /* Line height */
 }
 
+/* Styling for remember and forgot section */
 .remember-forgot {
-    font-size: 0.9em;
-    color: #162938;
-    font-weight: 500;
-    margin: -15px 0 15px;
-    display: flex;
-    justify-content: space-between;
+    font-size: 0.9em; /* Font size */
+    color: #162938; /* Text color */
+    font-weight: 500; /* Font weight */
+    margin: -15px 0 15px; /* Margin */
+    display: flex; /* Display as flex */
+    justify-content: space-between; /* Align content horizontally */
 }
 
+/* Styling for remember and forgot section label input */
 .remember-forgot label input {
-    accent-color: #162938;
-    margin-right: 3px;
+    accent-color: #162938; /* Accent color */
+    margin-right: 3px; /* Margin right */
 }
 
+/* Styling for remember and forgot section link */
 .remember-forgot a {
-    /*forgot password*/
-    color: #162938;
-    text-decoration: none;
+    color: #162938; /* Link color */
+    text-decoration: none; /* Remove underline */
+    /* forgot password */
 }
 
+/* Styling for remember and forgot section link on hover */
 .remember-forgot a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover */
 }
 
+/* Styling for button */
 .btn {
-    width: 100%;
-    height: 45px;
-    background: #162938 !important;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    color: #fff !important;
-    font-weight: 500;
+    width: 100%; /* Set width to 100% */
+    height: 45px; /* Set height to 45px */
+    background: #162938 !important; /* Background color */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    border-radius: 6px; /* Border radius */
+    cursor: pointer; /* Set cursor to pointer */
+    font-size: 1em; /* Font size */
+    color: #fff !important; /* Text color */
+    font-weight: 500; /* Font weight */
 }
 
+/* Styling for login register section */
 .login-register {
-    font-size: .9em;
-    color: #162938;
-    text-align: center;
-    font-weight: 500;
-    margin: 25px 0 10px;
+    font-size: .9em; /* Font size */
+    color: #162938; /* Text color */
+    text-align: center; /* Align text center */
+    font-weight: 500; /* Font weight */
+    margin: 25px 0 10px; /* Margin */
 }
 
+/* Styling for login register section link */
 .login-register p a {
-    color: #162938;
-    text-decoration: none;
-    font-weight: 600;
+    color: #162938; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600; /* Font weight */
 }
 
+/* Styling for login register section link on hover */
 .login-register p a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover */
 }
+
 
 /*---------Login Part CSS ENDED----------*/
 
@@ -184,15 +205,6 @@ body {
     align-items: center;
     width: 100%;
     position: relative;
-}
-
-#pos {
-    position: fixed;
-}
-
-.selArea {
-    width: 70%;
-
 }
 
 #background-video {
@@ -235,4 +247,22 @@ body {
 .wrapper.active .form-box.register {
     transition: transform .18s ease; /* Apply transition for register form when active */
     transform: translateX(0); /* Move register form into the wrapper */
+}
+
+
+/* Style the video wrapper */
+.video-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Make the video fill the entire wrapper */
+video#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers the entire container */
 }

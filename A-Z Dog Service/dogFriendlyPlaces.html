@@ -2,84 +2,298 @@
 <html lang="en">
 
 <head>
-    <!-- Meta tags for character set and viewport -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
 
-    <!-- Custom CSS files -->
-    <link rel="stylesheet" href="style.css" type="text/css"> <!-- Main stylesheet -->
-    <link rel="stylesheet" href="loadingStyle.css"> <!-- Loading animation stylesheet -->
-    <link rel="stylesheet" href="Mybutton.css"> <!-- Custom button stylesheet -->
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-    <!-- jQuery library -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
-    <!-- Title of the document -->
     <title>Document</title>
 
-    <!-- JavaScript function to handle loading animation -->
+    <style>
+        .btn-login {
+            background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+            border: 0;
+            border-radius: 12px;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 2.5;
+            outline: transparent;
+            padding: 0 1rem;
+            text-align: center;
+            text-decoration: none;
+            transition: box-shadow .2s ease-in-out;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+        }
+
+        .btn-login:not([disabled]):focus {
+            box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+        }
+
+        .btn-login:not([disabled]):hover {
+            box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+        }
+    </style>
+    
     <script>
         function openloading() {
-            // Hide the "View Results" button
             document.getElementById('show-btn').style.display = "none";
-            // Show the loading animation
             document.getElementById('r1').style.display = "block";
-            // Hide the map
             document.getElementById('map').style.display = "none";
             setTimeout(() => {
-                // Hide the loading animation after 3 seconds
                 document.getElementById('r1').style.display = "none";
                 var a = document.getElementById('map');
-                // Show the map after 3 seconds
-                a.style.display = "block";
+                a.style.display = "block"
             }, 3000);
         }
     </script>
 
+    <style>
+        /* LOADING CSS */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .ring {
+            display: none;
+
+            position: absolute;
+            top: 450%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            background: transparent;
+            border: 3px solid #3c3c3c;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 150px;
+            font-family: sans-serif;
+            font-size: 20px;
+            color: #fff000;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #fff000;
+            box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+        }
+
+        .ring:before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-top: 3px solid #fff000;
+            border-right: 3px solid #fff000;
+            border-radius: 50%;
+            animation: animateC 2s linear infinite;
+        }
+
+        .ring-span {
+            display: block;
+            position: absolute;
+            top: calc(50% - 2px);
+            left: 50%;
+            width: 50%;
+            height: 4px;
+            background: transparent;
+            transform-origin: left;
+            animation: animate 2s linear infinite;
+        }
+
+        .ring-span:before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #fff000;
+            top: -6px;
+            right: -8px;
+            box-shadow: 0 0 20px #fff000;
+        }
+
+        @keyframes animateC {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(45deg);
+            }
+
+            100% {
+                transform: rotate(405deg);
+            }
+        }
+    </style>
+
+    <!-- Home page CSS -->
+    <style>
+        body {
+            background-image: none;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+
+        #pos {
+            position: fixed;
+        }
+
+        .selArea {
+            width: 70%;
+
+        }
+
+        #background-video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: fill;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 100;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        @media all and (max-width: 991px) {
+            .sidebar {
+                background-color: rgba(225, 225, 225, 0.5);
+                backdrop-filter: blur(10px);
+            }
+        }
+
+        .wrapper {
+            width: 400px;
+            height: 400px;
+            transition: height .2s ease;
+        }
+
+        .wrapper.active {
+            height: 475px;
+        }
+
+        .wrapper.active .form-box.login {
+            transition: none;
+            transform: translateX(-400px);
+        }
+
+        .wrapper.active .form-box.register {
+            transition: transform .18s ease;
+            transform: translateX(0);
+        }
+    </style>
+    <!-- Home page CSS Over -->
+
+    <!-- button style -->
+    <style>
+        .btn-64 {
+            align-items: center;
+            background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+            border: 0;
+            border-radius: 8px;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            display: flex;
+            font-family: Phantomsans, sans-serif;
+            font-size: 20px;
+            justify-content: center;
+            line-height: 1em;
+            max-width: 100%;
+            min-width: 140px;
+            padding: 3px;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            cursor: pointer;
+            margin-top: 500px;
+            margin-left: 520px;
+        }
+
+        .btn-64:active,
+        .btn-64:hover {
+            outline: 0;
+        }
+
+        .btn-64 .btn-span {
+            background-color: rgb(5, 6, 45);
+            padding: 16px 24px;
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+            transition: 300ms;
+        }
+
+        .btn-64:hover .btn-span {
+            background: none;
+        }
+
+        @media (min-width: 768px) {
+            .btn-64 {
+                font-size: 24px;
+                min-width: 196px;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
-    <!-- Background video -->
     <video id="background-video" autoplay loop muted>
         <source src="videos/dog_friendly.mp4" type="video/mp4">
     </video>
 
-    <!-- Navbar -->
-    <div id="myNavbar"></div>
+    <!-- Our NavBar -->
+
+    <div id="myNavbar">
+
+    </div>
     <script>
-        // Load the navbar from an external HTML file
         $(function () {
             $("#myNavbar").load("navbarWithoutLogin.html");
         });
     </script>
     
-    <!-- Map iframe -->
-    <iframe id="map" src="https://www.google.com/maps/d/u/0/embed?mid=17rZ8T8miIanVi8CMX1BIbRzZ_vVSaNA&ehbc=2E312F&noprof=1" width="75%" height="500" style="position: relative; margin-top: 10px;
-	border-radius: 10px;position:relative;margin-left: 13%;display: none;"></iframe>
+    <!-- Navbar over -->
 
-    <!-- Loading animation -->
+    <div class="d-flex justify-content-center"></div>
+    <iframe id="map" src="https://www.google.com/maps/d/u/0/embed?mid=17rZ8T8miIanVi8CMX1BIbRzZ_vVSaNA&ehbc=2E312F&noprof=1" width="75%" height="500 " style="position: relative; margin-top: 10px;
+	border-radius: 10px;position:relative;margin-left: 13%;display: none; "></iframe>
+    </div>
+
     <div class="ring" id="r1">Loading
         <span class="ring-span"></span>
     </div>
 
-    <!-- Button to trigger loading animation -->
     <button class="btn-64" id="show-btn" onclick="openloading()" role="button"><span class="text btn-span">View Results</span></button>
-
-<!-- 
-    btn-64: Styles the button with a predefined height and width.
-text: Styles the text inside the button.
-btn-span: Styles the text span inside the button.
-ring: Styles the loading animation container.
-ring-span: Styles the loading animation span.
- -->
 </body>
 </html>

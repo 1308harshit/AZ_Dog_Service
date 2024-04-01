@@ -29,90 +29,118 @@
 
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-        <style>
-            
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    body{
-        background-image: url(img2.jpg);
-        background-blend-mode: multiply;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size:cover;
-        
-    }
-    .about-1{
-        margin: 30px;
-        padding: 5px;
-    }
-    .about-1 h1{
-        text-align: center;
-        font-family:'Courier New', Courier, monospace;
-        color: rgb(245, 74, 0);
-        font-size: 80px;
-        font-weight: 700;
-    }
-    .about-1 p{
-        text-align: center;
-        padding: 3px;
-        color: white;
-        font-size: 30px;
-    }
-    .about-item{
-        /* margin-bottom: 20px;
-        margin-top: 20px; */
-        background-color: white;
-        padding: 80px,30px;
-        box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
-        width: 100%;
-        height: 190%;
-        border-radius: 30px;
-    }
-    .about-item i{
-        font-size: 43px;
-        margin: 0;
-    }
-    .about-item h3{
-        font-size: 25px;
-        margin-bottom: 10px;
-    }
-    .about-item hr{
-        width: 46px;
-        height: 3px;
-        background-color: #5fbff9;
-        margin: 0 auto;
-        border: none;
-    }
-    .about-item p{
-        margin-top: 20px;
-        
-    }
-    .about-item:hover{
-        background-color: orange;
-        transition: 2s;
-    }
-    .about-item:hover i,
-    .about-item:hover h3,
-    .about-item:hover p{
-        color: white;
-    }
-    .about-item:hover hr{
-        background-color:white;
-    }
-    .about-item:hover i{
-        transform: translateY(-20px);
-    }
-    .about-item:hover i,
-    .about-item:hover h3,
-    .about-item:hover hr{
-        transition: all 400ms ease-in-out;
-    }
-.about-item:hover .change{
-    color: orangered;
+<style>
+    /* Resetting default margin and padding for all elements */
+*{
+    margin: 0;
+    padding: 0;
 }
+
+/* Setting background properties for the body */
+body{
+    background-image: url(img2.jpg); /* Background image */
+    background-blend-mode: multiply; /* Blend mode for background */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center; /* Center the background image */
+    background-size:cover; /* Cover the entire viewport with background image */
+}
+
+/* Styling for the first section with class .about-1 */
+.about-1{
+    margin: 30px; /* Margin */
+    padding: 5px; /* Padding */
+}
+
+/* Styling for headings within .about-1 */
+.about-1 h1{
+    text-align: center; /* Center align */
+    font-family:'Courier New', Courier, monospace; /* Font family */
+    color: rgb(245, 74, 0); /* Text color */
+    font-size: 80px; /* Font size */
+    font-weight: 700; /* Font weight */
+}
+
+/* Styling for paragraphs within .about-1 */
+.about-1 p{
+    text-align: center; /* Center align */
+    padding: 3px; /* Padding */
+    color: white; /* Text color */
+    font-size: 30px; /* Font size */
+}
+
+/* Styling for about items */
+.about-item{
+    background-color: white; /* Background color */
+    padding: 80px,30px; /* Padding */
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.6); /* Box shadow */
+    width: 100%; /* Width */
+    height: 190%; /* Height */
+    border-radius: 30px; /* Border radius */
+}
+
+/* Styling for icons within .about-item */
+.about-item i{
+    font-size: 43px; /* Font size */
+    margin: 0; /* Margin */
+}
+
+/* Styling for headings within .about-item */
+.about-item h3{
+    font-size: 25px; /* Font size */
+    margin-bottom: 10px; /* Margin bottom */
+}
+
+/* Styling for horizontal rule within .about-item */
+.about-item hr{
+    width: 46px; /* Width */
+    height: 3px; /* Height */
+    background-color: #5fbff9; /* Background color */
+    margin: 0 auto; /* Margin */
+    border: none; /* No border */
+}
+
+/* Styling for paragraphs within .about-item */
+.about-item p{
+    margin-top: 20px; /* Margin top */
+}
+
+/* Hover effect for .about-item */
+.about-item:hover{
+    background-color: orange; /* Background color */
+    transition: 2s; /* Transition */
+}
+
+/* Styling for hover effect on icon, heading, and paragraph within .about-item */
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p{
+    color: white; /* Text color */
+}
+
+/* Styling for hover effect on horizontal rule within .about-item */
+.about-item:hover hr{
+    background-color:white; /* Background color */
+}
+
+/* Styling for hover effect on icon within .about-item */
+.about-item:hover i{
+    transform: translateY(-20px); /* Translate vertically */
+}
+
+/* Transition for hover effect on icon, heading, and horizontal rule within .about-item */
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover hr{
+    transition: all 400ms ease-in-out; /* Transition */
+}
+
+/* Styling for hover effect on elements with class .change within .about-item */
+.about-item:hover .change{
+    color: orangered; /* Text color */
+}
+
 </style>
+
 </head>
 <body>
 

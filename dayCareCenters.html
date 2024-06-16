@@ -9,8 +9,6 @@
     <!-- Custom CSS files -->
     <link rel="stylesheet" href="css/style.css" type="text/css"> <!-- Main stylesheet -->
     <link rel="stylesheet" href="css/loadingStyle.css"> <!-- Loading animation stylesheet -->
-
-    <!-- Button CSS -->
     <link rel="stylesheet" href="css/Mybutton.css"> <!-- Custom button stylesheet -->
 
     <!-- Bootstrap CSS -->
@@ -41,6 +39,71 @@
             }, 3000);
         }
     </script>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        #myNavbar {
+            position: absolute;
+            width: 100%;
+            z-index: 1;
+        }
+
+        #map {
+            width: 75%;
+            height: 500px;
+            margin: 10px auto;
+            border-radius: 10px;
+            display: none;
+            position: relative;
+        }
+
+        .ring {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+        }
+
+        .btn-64 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media (max-width: 768px) {
+            #map {
+                width: 90%;
+                height: 300px;
+            }
+
+            .btn-64 {
+                font-size: 1rem;
+            }
+
+            .ring {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -60,8 +123,7 @@
 
     <!-- Map iframe -->
     <iframe id="map" src="https://www.google.com/maps/d/u/0/embed?mid=1QlGOX52bFmRdo7sW4t5rop_779n7xOE&ehbc=2E312F&noprof=1"
-        width="75%" height="500" style="position: relative; margin-top: 10px;
-	border-radius: 10px;position:relative;margin-left: 13%;display: none;"></iframe>
+        width="75%" height="500"></iframe>
 
     <!-- Loading animation -->
     <div class="ring" id="r1">Loading
@@ -71,20 +133,6 @@
     <!-- Button to trigger loading animation -->
     <button class="btn-64" id="show-btn" onclick="openloading()" role="button"><span class="text btn-span">View
             Results</span></button>
-
-
-            <!-- 
-                navbar: Creates a navigation bar.
-navbar-expand-lg: Specifies that the navbar should expand on large screens.
-navbar-dark: Sets the navbar's color scheme to dark.
-bg-transparent: Makes the background of the navbar transparent.
-container: Provides a responsive fixed-width container.
-btn-64: Styles the button with a predefined height and width.
-text: Styles the text inside the button.
-btn-span: Styles the text span inside the button.
-ring: Styles the loading animation container.
-ring-span: Styles the loading animation span.
-             -->
 </body>
 
 </html>

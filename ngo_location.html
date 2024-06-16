@@ -44,7 +44,6 @@
             }, 3000);
         }
     </script>
-
 </head>
 
 <body>
@@ -63,30 +62,30 @@
     </script>
     
     <!-- Map iframe -->
-    <div class="d-flex justify-content-center"></div> <!-- Flex container to center the map iframe -->
-
-    <iframe id="map" src="https://www.google.com/maps/d/u/0/embed?mid=1CA9HRWIDqLmC0Cl1-iOTqtzczwtSGMo&ehbc=2E312F&noprof=1"
-        width="75%" height="500" style="position: relative; margin-top: 10px;
-        border-radius: 10px;position:relative;margin-left: 13%;display: none; "></iframe>
+    <div class="d-flex justify-content-center">
+        <iframe id="map" src="https://www.google.com/maps/d/u/0/embed?mid=1CA9HRWIDqLmC0Cl1-iOTqtzczwtSGMo&ehbc=2E312F&noprof=1"
+            width="75%" height="500" style="position: relative; margin-top: 10px; border-radius: 10px; display: none;"></iframe>
+    </div>
 
     <!-- Loading animation -->
-    <div class="ring" id="r1">Loading <!-- Container for loading animation -->
-        <span class="ring-span"></span> <!-- Loading animation element -->
+    <div class="ring" id="r1">Loading
+        <span class="ring-span"></span>
     </div>
 
     <!-- Button to trigger loading animation -->
-    <button class="btn-64" id="show-btn" onclick="openloading()" role="button"><span class="text btn-span">View
-            Results</span></button>
+    <div class="d-flex justify-content-center mt-3">
+        <button class="btn-64" id="show-btn" onclick="openloading()" role="button"><span class="text btn-span">View Results</span></button>
+    </div>
 
-<!-- 
-    d-flex: Flex container to manage the layout of child elements.
-justify-content-center: Center aligns the child elements horizontally within the flex container.
-btn-64: Styles the button with a predefined height and width.
-text: Styles the text inside the button.
-btn-span: Styles the text span inside the button.
-ring: Styles the loading animation container.
-ring-span: Styles the loading animation span.
- -->
+    <!-- 
+        d-flex: Flex container to manage the layout of child elements.
+        justify-content-center: Center aligns the child elements horizontally within the flex container.
+        btn-64: Styles the button with a predefined height and width.
+        text: Styles the text inside the button.
+        btn-span: Styles the text span inside the button.
+        ring: Styles the loading animation container.
+        ring-span: Styles the loading animation span.
+    -->
 </body>
 
 </html>

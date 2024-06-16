@@ -1,3 +1,4 @@
+/* updated */
 /* Styling for button with class .btn-64 */
 .btn-64 {
     align-items: center; /* Align items vertically */
@@ -20,17 +21,15 @@
     cursor: pointer; /* Set cursor to pointer */
     position: fixed; /* Position fixed */
     bottom: 20px; /* Distance from bottom */
-    left: 40%; /* Center horizontally */
-    
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center the button */
 }
 
-/* Styling for button when active or hovered */
 .btn-64:active,
 .btn-64:hover {
     outline: 0; /* Remove outline */
 }
 
-/* Styling for span within the button */
 .btn-64 .btn-span {
     background-color: rgb(5, 6, 45); /* Background color */
     padding: 16px 24px; /* Padding */
@@ -40,12 +39,10 @@
     transition: 300ms; /* Apply transition effect */
 }
 
-/* Styling for span within the button on hover */
 .btn-64:hover .btn-span {
     background: none; /* Remove background on hover */
 }
 
-/* Media query for devices with a minimum width of 768px */
 @media (min-width: 768px) {
     .btn-64 {
         font-size: 24px; /* Increase font size */

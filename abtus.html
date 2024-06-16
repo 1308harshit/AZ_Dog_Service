@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Us - A-Z Dog Service</title>
 
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -11,139 +11,168 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-<style>
-    /* Resetting default margin and padding for all elements */
-*{
-    margin: 0;
-    padding: 0;
-}
+        body {
+            background-image: url("images/img2.jpg");
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
 
-/* Setting background properties for the body */
-body{
-    background-image: url("images/img2.jpg"); /* Background image */
-    background-blend-mode: multiply; /* Blend mode for background */
-    background-repeat: no-repeat; /* Prevent background image from repeating */
-    background-position: center; /* Center the background image */
-    background-size:cover; /* Cover the entire viewport with background image */
-}
+        .about-1 {
+            margin: 30px;
+            padding: 5px;
+        }
 
-/* Styling for the first section with class .about-1 */
-.about-1{
-    margin: 30px; /* Margin */
-    padding: 5px; /* Padding */
-}
+        .about-1 h1 {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            color: rgb(245, 74, 0);
+            font-size: 80px;
+            font-weight: 700;
+        }
 
-/* Styling for headings within .about-1 */
-.about-1 h1{
-    text-align: center; /* Center align */
-    font-family:'Courier New', Courier, monospace; /* Font family */
-    color: rgb(245, 74, 0); /* Text color */
-    font-size: 80px; /* Font size */
-    font-weight: 700; /* Font weight */
-}
+        .about-1 p {
+            text-align: center;
+            padding: 3px;
+            color: white;
+            font-size: 30px;
+        }
 
-/* Styling for paragraphs within .about-1 */
-.about-1 p{
-    text-align: center; /* Center align */
-    padding: 3px; /* Padding */
-    color: white; /* Text color */
-    font-size: 30px; /* Font size */
-}
+        .about-item {
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 9px rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+        }
 
-/* Styling for about items */
-.about-item{
-    background-color: white; /* Background color */
-    padding: 80px,30px; /* Padding */
-    box-shadow: 0 0 9px rgba(0, 0, 0, 0.6); /* Box shadow */
-    width: 100%; /* Width */
-    height: 190%; /* Height */
-    border-radius: 30px; /* Border radius */
-}
+        .about-item i {
+            font-size: 43px;
+            margin: 0;
+        }
 
-/* Styling for icons within .about-item */
-.about-item i{
-    font-size: 43px; /* Font size */
-    margin: 0; /* Margin */
-}
+        .about-item h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
 
-/* Styling for headings within .about-item */
-.about-item h3{
-    font-size: 25px; /* Font size */
-    margin-bottom: 10px; /* Margin bottom */
-}
+        .about-item hr {
+            width: 46px;
+            height: 3px;
+            background-color: #5fbff9;
+            margin: 0 auto;
+            border: none;
+        }
 
-/* Styling for horizontal rule within .about-item */
-.about-item hr{
-    width: 46px; /* Width */
-    height: 3px; /* Height */
-    background-color: #5fbff9; /* Background color */
-    margin: 0 auto; /* Margin */
-    border: none; /* No border */
-}
+        .about-item p {
+            margin-top: 20px;
+        }
 
-/* Styling for paragraphs within .about-item */
-.about-item p{
-    margin-top: 20px; /* Margin top */
-}
+        .about-item:hover {
+            background-color: orange;
+            transition: 2s;
+        }
 
-/* Hover effect for .about-item */
-.about-item:hover{
-    background-color: orange; /* Background color */
-    transition: 2s; /* Transition */
-}
+        .about-item:hover i,
+        .about-item:hover h3,
+        .about-item:hover p {
+            color: white;
+        }
 
-/* Styling for hover effect on icon, heading, and paragraph within .about-item */
-.about-item:hover i,
-.about-item:hover h3,
-.about-item:hover p{
-    color: white; /* Text color */
-}
+        .about-item:hover hr {
+            background-color: white;
+        }
 
-/* Styling for hover effect on horizontal rule within .about-item */
-.about-item:hover hr{
-    background-color:white; /* Background color */
-}
+        .about-item:hover i {
+            transform: translateY(-20px);
+        }
 
-/* Styling for hover effect on icon within .about-item */
-.about-item:hover i{
-    transform: translateY(-20px); /* Translate vertically */
-}
+        .about-item:hover i,
+        .about-item:hover h3,
+        .about-item:hover hr {
+            transition: all 400ms ease-in-out;
+        }
 
-/* Transition for hover effect on icon, heading, and horizontal rule within .about-item */
-.about-item:hover i,
-.about-item:hover h3,
-.about-item:hover hr{
-    transition: all 400ms ease-in-out; /* Transition */
-}
+        .about-item:hover .change {
+            color: orangered;
+        }
 
-/* Styling for hover effect on elements with class .change within .about-item */
-.about-item:hover .change{
-    color: orangered; /* Text color */
-}
+        @media (max-width: 768px) {
+            .about-1 h1 {
+                font-size: 40px;
+            }
 
-</style>
+            .about-1 p {
+                font-size: 20px;
+            }
 
+            .about-item {
+                padding: 20px;
+            }
+
+            .about-item i {
+                font-size: 30px;
+            }
+
+            .about-item h3 {
+                font-size: 20px;
+            }
+
+            .about-item p {
+                font-size: 15px;
+            }
+
+            .about-item hr {
+                width: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .about-1 h1 {
+                font-size: 30px;
+            }
+
+            .about-1 p {
+                font-size: 18px;
+            }
+
+            .about-item {
+                padding: 10px;
+            }
+
+            .about-item i {
+                font-size: 25px;
+            }
+
+            .about-item h3 {
+                font-size: 18px;
+            }
+
+            .about-item p {
+                font-size: 12px;
+            }
+
+            .about-item hr {
+                width: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-
     <!-- Navbar -->
     <div id="myNavbar"></div>
     <script>
@@ -153,96 +182,89 @@ body{
         });
     </script>
 
-        <div class="container-fluid">
-            <section id="about">
-                <div class="about-1">
-                    <h1>About Us</h1>
-                    <p>Welcome to A-Z Dog Service, where passion meets innovation in the realm of pet care. Our journey began with a simple yet profound realization: the need for a comprehensive solution to address the diverse needs of dog owners and their beloved companions.</p>
-                </div>
-                <div id="about-2">
-                    <div class="content-box-lg">
-                        <div class="container" >
-                            <div class="row" >
-                                <!-- div- 1 -->
-                                <div class="col-md-4" style="height: 300px;">
-                                    <div class="about-item text-center">
-                                        <i class="fa fa-book"></i>
-                                        <h3 style="font-size: 3rem;">MISSION</h3>
-                                        <hr>
-                                        <p style="font-size: 20px; font-weight: 500; text-align: center;line-height: 40px;">Our mission is to simplify and streamline the process of finding top-quality care for dogs by connecting pet owners and people with trusted professionals, fostering a supportive community of dog lovers, and promoting responsible pet ownership through innovative. solutions and personalized support.</p>
-                                    </div>
+    <div class="container-fluid">
+        <section id="about">
+            <div class="about-1">
+                <h1>About Us</h1>
+                <p>Welcome to A-Z Dog Service, where passion meets innovation in the realm of pet care. Our journey began with a simple yet profound realization: the need for a comprehensive solution to address the diverse needs of dog owners and their beloved companions.</p>
+            </div>
+            <div id="about-2">
+                <div class="content-box-lg">
+                    <div class="container">
+                        <div class="row">
+                            <!-- div- 1 -->
+                            <div class="col-md-4 col-sm-6 mb-4">
+                                <div class="about-item text-center">
+                                    <i class="fa fa-book"></i>
+                                    <h3>MISSION</h3>
+                                    <hr>
+                                    <p>Our mission is to simplify and streamline the process of finding top-quality care for dogs by connecting pet owners and people with trusted professionals, fostering a supportive community of dog lovers, and promoting responsible pet ownership through innovative solutions and personalized support.</p>
                                 </div>
-                                <!-- div - 2 -->
-                                <div class="col-md-4" style="height: 300px;">
-                                    <div class="about-item text-center">
-                                        <i class="fa fa-globe"></i>
-                                        <h3 style="font-size: 3rem;">VISION</h3>
-                                        <hr>
-                                        <p style="font-size: 20px; font-weight: 500; text-align: center;line-height: 40px;">Our vision at A-Z Dog Service is to revolutionize the way people access essential dog care services, leveraging technology to create a world where every dog receives prompt, reliable, transparent and compassionate care, regardless of their circumstances.</p>
-                                    </div>
+                            </div>
+                            <!-- div - 2 -->
+                            <div class="col-md-4 col-sm-6 mb-4">
+                                <div class="about-item text-center">
+                                    <i class="fa fa-globe"></i>
+                                    <h3>VISION</h3>
+                                    <hr>
+                                    <p>Our vision at A-Z Dog Service is to revolutionize the way people access essential dog care services, leveraging technology to create a world where every dog receives prompt, reliable, transparent, and compassionate care, regardless of their circumstances.</p>
                                 </div>
-                                <!-- div - 3 -->
-                                <div class="col-md-4" style="height: 300px;">
-                                    <div class="about-item text-center">
-                                        <i class="fa fa-cog"></i>
-                                        <h3 style="font-size: 3rem;">Our Services</h3>
-                                        <hr>
-                                        <h3 style="font-size: 20px; font-weight: 600;" class="change">Emergency Aid :</h3>
-                                        <p style="font-size: 18px; font-weight: 600; text-align: center;">Filtered Gov/Non-Gov/NGO’s Locations.</p>
-                                        <h3 style="font-size: 20px;font-weight: 600;" class="change">Day care :</h3>
-                                        <p style="font-size: 18px; font-weight: 600; text-align: center;">Busy schedule? No problem! We offer reliable sources of day-care options near you.</p>
-                                        <h3 style="font-size: 20px;font-weight: 600;" class="change">Grooming :</h3>
-                                        <p style="font-size: 18px; font-weight: 600; text-align: center;">Treat your dog to a spa day with our grooming services.</p>
-                                        <h3 style="font-size: 20px;font-weight: 600;" class="change">Training:</h3>
-                                        <p style="font-size: 18px; font-weight: 600; text-align: center;">Unlock your dog's full potential with best training programs.</p>
-                                    </div>
+                            </div>
+                            <!-- div - 3 -->
+                            <div class="col-md-4 col-sm-6 mb-4">
+                                <div class="about-item text-center">
+                                    <i class="fa fa-cog"></i>
+                                    <h3>Our Services</h3>
+                                    <hr>
+                                    <h3 class="change">Emergency Aid :</h3>
+                                    <p>Filtered Gov/Non-Gov/NGO’s Locations.</p>
+                                    <h3 class="change">Day care :</h3>
+                                    <p>Busy schedule? No problem! We offer reliable sources of day-care options near you.</p>
+                                    <h3 class="change">Grooming :</h3>
+                                    <p>Treat your dog to a spa day with our grooming services.</p>
+                                    <h3 class="change">Training:</h3>
+                                    <p>Unlock your dog's full potential with best training programs.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-
-            <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light" style="position: relative; top: 451px;">
-        <div class="container-fluid py-5">
-            <div class="row ">
-                <div class="col-lg-6 col-md-6" style="padding-left: 60px;">
-                    <h4 class="text-white  mb-3"  style="font-family: Arial Black; font-size:30px;" >Ahmedabad(Head Office)</h4>
-                    <p class="mt-2" style="font-family:sans-serif; font-size:25px;">
-                        Near Sarkhej-Sanand Circle, Off. S.G. Road<br>
-                        Ahmedabad<br>
-                        Gujarat 382210<br>
-                        India
-                    </p>
-                    <br>
-            
-                    <p class="copyright" style="position:relative; top:10px;font-size: 20px;" >
-                        &copy; 2024 All rights reserved
-                      </p>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <h4 class="text-danger mb-3" style="font-family:Arial Black ; font-size:30px;">Contact</h4>
-                    <p class="mb-2" style="font-family:sans-serif; font-size:25px;"><i class="fa fa-map-marker-alt me-3"></i>L.J. Istitute Of Engineering and Technology </p>
-                    <p class="mb-2" style="font-family:sans-serif; font-size:25px;"><i class="fa fa-phone-alt me-3"></i>+91 9328315950</p>
-                    <p class="mb-2" style="font-family:sans-serif; font-size:25px;"><i class="fa fa-envelope me-3"></i>khatsuriyaharshit@gmail.com</p>
-                    <br>
-                    <p class="mb-3" style="font-family:Arial Black ; font-size:20px;">
-                        Please, Submit For Any Further Details !!
-                      </p>
-            
-                      <form action="">
-                        <input type="email" style="width:400px" name="email" class="input-field" placeholder="Enter Your Email" required>
-                        <br><br>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                      </form>
-            
-
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light mt-5">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <h4 class="text-white mb-3" style="font-family: Arial Black; font-size: 30px;">Ahmedabad (Head Office)</h4>
+                        <p style="font-family: sans-serif; font-size: 25px;">
+                            Near Sarkhej-Sanand Circle, Off. S.G. Road<br>
+                            Ahmedabad<br>
+                            Gujarat 382210<br>
+                            India
+                        </p>
+                        <p class="mt-2" style="font-size: 20px;">
+                            &copy; 2024 All rights reserved
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <h4 class="text-danger mb-3" style="font-family: Arial Black; font-size: 30px;">Contact</h4>
+                        <p class="mb-2" style="font-family: sans-serif; font-size: 25px;"><i class="fa fa-map-marker-alt me-3"></i>L.J. Institute Of Engineering and Technology</p>
+                        <p class="mb-2" style="font-family: sans-serif; font-size: 25px;"><i class="fa fa-phone-alt me-3"></i>+91 9328315950</p>
+                        <p class="mb-2" style="font-family: sans-serif; font-size: 25px;"><i class="fa fa-envelope me-3"></i>khatsuriyaharshit@gmail.com</p>
+                        <p class="mt-3" style="font-family: Arial Black; font-size: 20px;">
+                            Please, Submit For Any Further Details !!
+                        </p>
+                        <form action="">
+                            <input type="email" class="form-control mb-3" placeholder="Enter Your Email" required>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-        
-    <!-- Footer End -->
+        <!-- Footer End -->
+    </div>
 </body>
 </html>

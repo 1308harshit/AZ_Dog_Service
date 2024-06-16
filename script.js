@@ -1,16 +1,21 @@
-// Selecting elements from the DOM
-const wrapper = document.querySelector('.wrapper'); // Selecting the wrapper element
-const loginLink = document.querySelector('.login-link'); // Selecting the login link element
-const registerLink = document.querySelector('.register-link'); // Selecting the register link element
+document.addEventListener('DOMContentLoaded', function() {
+    const wrapper = document.querySelector('.wrapper'); // Selecting the wrapper element
+    const navbar = document.querySelector('#myNavbar'); // Selecting the navbar element
 
-// Adding event listener for the register link
-registerLink.addEventListener('click', () => {
-    // When the register link is clicked, add the 'active' class to the wrapper element
-    wrapper.classList.add('active');
-});
+    // Adding event listener to the parent element of login and register links (event delegation)
+    navbar.addEventListener('click', function(event) {
+        const target = event.target;
 
-// Adding event listener for the login link
-loginLink.addEventListener('click', () => {
-    // When the login link is clicked, remove the 'active' class from the wrapper element
-    wrapper.classList.remove('active');
+        // Check if the clicked element is the login link
+        if (target.classList.contains('login-link')) {
+            // Remove 'active' class from wrapper
+            wrapper.classList.remove('active');
+        }
+
+        // Check if the clicked element is the register link
+        if (target.classList.contains('register-link')) {
+            // Add 'active' class to wrapper
+            wrapper.classList.add('active');
+        }
+    });
 });
